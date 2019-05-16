@@ -36,5 +36,14 @@ function drawPyramid(height) {
         // create an element whose inner text is rowStr,
         // and insert it as a child of the container <div id="pyramid">
 
+        var textNode = document.createTextNode(rowStr);
+        var node = document.createElement("p");
+        node.appendChild(textNode);
+        document.getElementById("pyramid").appendChild(node); 
+
     }
+
+    var constructionNode = document.getElementById("construction");
+    var parentNode = document.getElementById("pyramid");
+    parentNode.removeChild(constructionNode);
 }
